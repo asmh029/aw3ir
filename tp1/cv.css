@@ -1,0 +1,130 @@
+/* ---------- Base ---------- */
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.5;
+    color: #222;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #d9d9d9; /* gris */
+    background: linear-gradient(180deg, #e6e6e6 0%, #bfc5cc 100%); /* gradient */
+    background-attachment: fixed;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin: 32px 0 10px;
+    color: #1f3a5f;
+    border-left: 6px solid #e67e22;
+    padding-left: 12px;
+}
+
+h2 {
+    font-size: 1.15em;
+    margin: 24px 0 4px;
+    color: #1f3a5f;
+}
+
+/* ---------- Tableaux ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; /* tableaux blancs */
+    border-color: #b5b5b5;
+}
+
+th, td {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    overflow-wrap: anywhere;
+}
+
+th {
+    width: 22%;
+    color: #1f3a5f;
+}
+
+/* lignes impaires colorées */
+table tr:nth-child(odd) {
+    background-color: #eef2f7;
+}
+
+/* survol d'une ligne */
+table tr:hover {
+    background-color: #ffe3c4;
+}
+
+/* ---------- Liens ---------- */
+a {
+    color: #1f5fa8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #e67e22; /* orange au survol */
+    text-decoration: underline;
+}
+
+h1 a {
+    color: #1f3a5f;
+}
+
+/* ---------- Images ---------- */
+.photo {
+    width: 130px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(2); /* agrandissement au survol */
+}
+
+/* ---------- Pages formations / expériences ---------- */
+ul {
+    background-color: #fff;
+    padding: 12px 12px 12px 36px;
+    margin: 8px 0;
+}
+
+li:nth-child(odd) {
+    background-color: #eef2f7;
+}
+
+li:hover {
+    background-color: #ffe3c4;
+}
+
+p {
+    margin: 6px 0;
+}
+
+/* ---------- Responsive ---------- */
+@media only screen and (max-width: 600px) {
+    body {
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+        padding: 12px;
+    }
+
+    table, th, td {
+        width: 100%;
+    }
+
+    th, td {
+        display: block;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+}
