@@ -1,0 +1,93 @@
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #222;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* ---------- Formulaire ---------- */
+form {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}
+
+input {
+    width: 250px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1em;
+    box-sizing: border-box; /* margin/padding n'impactent pas la largeur */
+}
+
+/* ---------- Bouton ---------- */
+.btn-primary {
+    border-radius: 5px;
+    padding: 6px 12px;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input.btn-primary {
+    width: auto;
+    border: 1px solid #0d6efd;
+}
+
+/* formulaire non valide : bouton grisé */
+form:invalid input[type="submit"] {
+    background-color: gray;
+    border-color: gray;
+}
+
+/* ---------- Champ non valide ---------- */
+input:invalid {
+    border: 1px solid red;
+}
+
+/* émoji caché tant que le champ est invalide */
+input:invalid + .icon-ok {
+    display: none;
+}
+
+/* ---------- Champ valide ---------- */
+input:valid + .icon-ok {
+    display: inline-block;
+}
+
+/* ---------- Page action.html ---------- */
+a.btn-primary {
+    display: inline-block;
+}
+
+div.resultat {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 16px;
+    box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+}
+
+/* ---------- Mobile ---------- */
+@media only screen and (max-width: 600px) {
+    label {
+        display: block;
+        width: auto;
+        margin-bottom: 4px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
