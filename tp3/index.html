@@ -1,39 +1,87 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP3</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TP #3 - Bootstrap</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <!-- CSS bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
 
-    <style>
-        body {
-            background-color: #e9ebee;
-            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-    </style>
+    <!-- librairie Javascript de bootstrap (modal, collapse...) -->
+    <script src="js/bootstrap.bundle.js"></script>
 
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+    <!-- validation du formulaire -->
+    <script src="js/form-validation.js"></script>
 </head>
+<body class="bg-light">
 
-<body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP3
-    </nav>
-    <h1>tp3</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
+    <div class="container">
+
+        <h1 class="my-4">TP #3 - Formulaire avec Bootstrap</h1>
+
+        <form id="myForm" class="bg-white border rounded p-4 shadow-sm" novalidate>
+
+            <div class="row mb-3">
+                <label for="name" class="col-sm-3 col-form-label">Nom</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="name" name="name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="firstname" class="col-sm-3 col-form-label">Prénom</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="firstname" name="firstname">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="birthday" class="col-sm-3 col-form-label">Date de naissance</label>
+                <div class="col-sm-9">
+                    <input type="date" class="form-control" id="birthday" name="birthday">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="address" class="col-sm-3 col-form-label">Adresse postale</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="address" name="address">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="email" class="col-sm-3 col-form-label">Adresse mail</label>
+                <div class="col-sm-9">
+                    <input type="email" class="form-control" id="email" name="email">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-9 offset-sm-3">
+                    <button type="submit" id="submit" class="btn btn-primary">Envoyer</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
-
 </html>
